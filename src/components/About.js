@@ -15,9 +15,11 @@ export default function About() {
       { threshold: 0.4 }
     );
 
-    if (aboutRef.current) observer.observe(aboutRef.current);
+    const node = aboutRef.current; // ✅ capture the current ref safely
+    if (node) observer.observe(node);
+
     return () => {
-      if (aboutRef.current) observer.unobserve(aboutRef.current);
+      if (node) observer.unobserve(node); // ✅ use captured node instead of ref.current
     };
   }, []);
 

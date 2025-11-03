@@ -10,7 +10,7 @@ import garimaImage from "../assets/Garima.jpeg";
 
 
 
-const bunnyAnimation = "https://assets4.lottiefiles.com/packages/lf20_3vbOcw.json";
+//const bunnyAnimation = "https://assets4.lottiefiles.com/packages/lf20_3vbOcw.json";
 
 export default function HeroSection() {
   useEffect(() => {
