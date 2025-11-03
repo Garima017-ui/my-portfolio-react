@@ -1,0 +1,109 @@
+/* 🌈 Contact + Footer Section */
+.contact-footer {
+  position: relative;
+  background: linear-gradient(180deg, #a1c4fd, #fbc2eb, #ffd6e0);
+  color: #2c2c2c;
+  text-align: center;
+  padding: 80px 10% 40px;
+  overflow: hidden;
+}
+
+/* Smooth fade-in */
+.contact-footer {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌸 Title & Text */
+.contact-title {
+  font-size: 2.2rem;
+  color: #382b22;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto 40px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 Buttons */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #382b22;
+  background: linear-gradient(135deg, #fff0f0, #ffe3e2);
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  padding: 0.8em 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(255, 182, 193, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #f9c4d2, #fbc2eb);
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
+}
+
+.contact-btn:active {
+  transform: translateY(2px);
+}
+
+/* ✨ Footer Line */
+.footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.footer p {
+  font-size: 0.95rem;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* 🌼 Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 0.7em 1.2em;
+  }
+}

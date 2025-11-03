@@ -1,0 +1,51 @@
+.contact {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #333;
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.email {
+  background-color: #ff9a9e;
+  color: white;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.github {
+  background-color: #333;
+  color: white;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}

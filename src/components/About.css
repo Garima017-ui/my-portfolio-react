@@ -1,0 +1,116 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #fcefee, #f9e0f9, #e2f0ff);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 📦 Container that centers cards */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* natural spacing between cards */
+  transition: all 1s ease;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* 🩵 Card style */
+.about-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+/* 🌈 Default stacked state (collapsed) */
+.about.stack .about-card:nth-child(1) {
+  transform: translateY(40px);
+  opacity: 0.9;
+}
+.about.stack .about-card:nth-child(2) {
+  transform: translateY(20px);
+  opacity: 0.9;
+}
+.about.stack .about-card:nth-child(3) {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+/* ✨ Spread apart evenly when visible */
+.about.spread .about-card:nth-child(1) {
+  transform: translateY(-80px);
+  opacity: 1;
+}
+.about.spread .about-card:nth-child(2) {
+  transform: translateY(0);
+  opacity: 1;
+}
+.about.spread .about-card:nth-child(3) {
+  transform: translateY(80px);
+  opacity: 1;
+}
+
+/* 🎨 Card content */
+.about-card h3 {
+  color: #9c27b0;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px solid rgba(156, 39, 176, 0.2);
+  padding-bottom: 6px;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-card li::before {
+  content: "✨ ";
+  color: #9c27b0;
+}
+
+/* 💫 Hover lift */
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(156, 39, 176, 0.25);
+  z-index: 2;
+}
+
+/* 📱 Responsive layout */
+@media (max-width: 768px) {
+  .about-container {
+    gap: 20px;
+  }
+
+  .about-card {
+    transform: none !important;
+    opacity: 1;
+  }
+}

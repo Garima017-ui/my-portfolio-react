@@ -1,19 +1,21 @@
 import React from "react";
-import Header from "./components/Header.js";
+import HeroSection from "./components/HeroSection.js";
+import ContactFooter from "./components/ContactFooter.js";
 import About from "./components/About.js";
 import Projects from "./components/Projects.js";
-import Contact from "./components/Contact.js";
-import Footer from "./components/Footer.js";
+
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+  
+      <HeroSection />
       <About />
       <Projects />
-      <Contact />
-      <Footer />
+
+      <ContactFooter/>
     </div>
   );
 }

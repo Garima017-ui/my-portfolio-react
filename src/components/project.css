@@ -1,0 +1,85 @@
+.projects {
+  position: relative;
+  text-align: center;
+  padding: 100px 10%;
+  background: linear-gradient(180deg, #a6c1ee 0%, #fbc2eb 50%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #9c27b0;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(156, 39, 176, 0.2);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #382b22;
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.project-btn {
+  background: #ffb6c1;
+  color: #382b22;
+  font-weight: bold;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #a1c4fd;
+  color: #fff;
+}
+
+/* Decorative floating blobs */
+.projects::before, .projects::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: float 10s ease-in-out infinite;
+}
+
+.projects::before {
+  width: 200px;
+  height: 200px;
+  background: #ffd6e0;
+  top: 5%;
+  left: 10%;
+}
+
+.projects::after {
+  width: 150px;
+  height: 150px;
+  background: #a1c4fd;
+  bottom: 5%;
+  right: 15%;
+}
