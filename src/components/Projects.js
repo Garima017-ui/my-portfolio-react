@@ -4,28 +4,18 @@ import "./project.css";
 export default function Projects() {
   const projects = [
     {
-      title: "🌐 Smart Grocery Comparator",
-      desc: "A full-stack web app that compares grocery prices and nutrition data from multiple stores in real time using Angular, Flask, and MongoDB.",
-      tech: ["Angular", "Flask", "MongoDB", "REST API"],
-      link: "https://github.com/Garima017-ui/smart-grocery-comparator",
+      title: "🧭 AbleAid — Accessibility Assistant",
+      desc: "An inclusive web app designed to assist visually and speech-impaired users through voice-guided navigation, speech-to-text, OCR-based document reading, and adaptive dark/light themes.",
+      tech: ["React", "Tesseract.js", "Web Speech API", "CSS", "Accessibility Design"],
+      link: "https://ableaid.netlify.app/", // Replace with your deployed AbleAid URL
+      github: "https://github.com/Garima017-ui/ableaid", // Replace with your repo link
     },
     {
-      title: "🧠 Real-Time Feedback Analyzer",
-      desc: "An AI-powered system that performs sentiment analysis on live customer feedback using Flask, NLP, and D3.js visualizations.",
-      tech: ["Python", "Flask", "NLP", "D3.js"],
-      link: "https://github.com/Garima017-ui/feedback-analyzer",
-    },
-    {
-      title: "📱 Ionic Fitness Tracker",
-      desc: "A mobile app built with Ionic and Angular for tracking fitness goals, daily steps, and health insights with a clean UI.",
-      tech: ["Ionic", "Angular", "TypeScript"],
-      link: "https://github.com/Garima017-ui/fitness-tracker",
-    },
-    {
-      title: "📚 Library Reservation System",
-      desc: "A Spring Boot + Thymeleaf web app for managing library book reservations, edits, and deletions with H2 database.",
-      tech: ["Spring Boot", "Thymeleaf", "H2"],
-      link: "https://github.com/Garima017-ui/library-reservation",
+      title: "💼 Personal Portfolio Website",
+      desc: "A dynamic and fully responsive portfolio built using React, showcasing professional projects, skills, and achievements with smooth animations, theme support, and modern UI/UX design principles.",
+      tech: ["React", "AOS", "CSS", "TypewriterJS"],
+      link: "https://garimaportfolio1.netlify.app/", // Your portfolio live link
+      github: "https://github.com/Garima017-ui/my-portfolio-react",
     },
   ];
 
@@ -46,14 +36,14 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <a
-              href={proj.link}
-              target="_blank"
-              rel="noreferrer"
-              className="view-btn"
-            >
-              🔗 View Project
-            </a>
+            <div className="project-links">
+              <a href={proj.link} target="_blank" rel="noreferrer" className="view-btn">
+                🌐 View Live
+              </a>
+              <a href={proj.github} target="_blank" rel="noreferrer" className="code-btn">
+                💻 Source Code
+              </a>
+            </div>
           </div>
         ))}
       </div>
