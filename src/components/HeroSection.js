@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./HerSection.css";
-import garimaImage from "../assets/Garima.jpeg";
+import garimaImage from "../assets/Garima1.jpeg";
 
 export default function HeroSection() {
   useEffect(() => {
