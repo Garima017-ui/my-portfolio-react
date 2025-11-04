@@ -1,109 +1,77 @@
-/* 🌈 Contact + Footer Section */
-.contact-footer {
-  position: relative;
-  background: linear-gradient(180deg, #a1c4fd, #fbc2eb, #ffd6e0);
-  color: #2c2c2c;
+.footer {
+  background: linear-gradient(135deg, #e8f0ff 0%, #f5f7ff 100%);
+  color: #1e1e2f;
   text-align: center;
-  padding: 80px 10% 40px;
-  overflow: hidden;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  border-top: 3px solid #004aad;
 }
 
-/* Smooth fade-in */
-.contact-footer {
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
+.footer-container h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 15px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 🌸 Title & Text */
-.contact-title {
-  font-size: 2.2rem;
-  color: #382b22;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
-}
-
-.contact-text {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 10px auto 40px;
+.footer-container p {
+  font-size: 1rem;
+  color: #333;
   line-height: 1.6;
-  background: rgba(255, 255, 255, 0.55);
-  border-radius: 15px;
-  padding: 15px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* 🌟 Buttons */
-.contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #382b22;
-  background: linear-gradient(135deg, #fff0f0, #ffe3e2);
-  border: 2px solid #b18597;
-  border-radius: 0.75em;
-  padding: 0.8em 1.5em;
+.hire-text {
   font-weight: 600;
-  text-transform: uppercase;
-  box-shadow: 0 5px 10px rgba(255, 182, 193, 0.3);
+  font-size: 1.05rem;
+  color: #002b80;
+  margin-bottom: 30px;
+}
+
+.email-link {
+  color: #0052cc;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 }
 
-.contact-btn:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(135deg, #f9c4d2, #fbc2eb);
-  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
+.email-link:hover {
+  border-bottom: 2px solid #004aad;
+  color: #003d99;
 }
 
-.contact-btn:active {
-  transform: translateY(2px);
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 35px;
 }
 
-/* ✨ Footer Line */
-.footer {
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 2px solid rgba(255, 255, 255, 0.4);
+.social-links a {
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.footer p {
-  font-size: 0.95rem;
-  color: #333;
-  opacity: 0.8;
+.social-links a:hover {
+  color: #002b80;
 }
 
-/* 🌼 Responsive Design */
+.copyright {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
-  .contact-title {
-    font-size: 1.8rem;
+  .footer-container h2 {
+    font-size: 1.6rem;
   }
-
-  .contact-text {
-    font-size: 1rem;
-    padding: 12px 15px;
-  }
-
-  .contact-btn {
-    font-size: 0.9rem;
-    padding: 0.7em 1.2em;
+  .footer-container p {
+    font-size: 0.95rem;
   }
 }

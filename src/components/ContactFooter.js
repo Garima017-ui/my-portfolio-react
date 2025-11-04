@@ -1,56 +1,47 @@
 import React from "react";
 import "./ContactFooter.css";
-import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 export default function ContactFooter() {
   return (
-    <section className="contact-footer" id="contact">
-      <div className="contact-container">
-        <h2 className="contact-title" data-aos="fade-up">
-          Let’s Connect 💬
-        </h2>
-        <p className="contact-text" data-aos="fade-up" data-aos-delay="100">
-          I love collaborating on creative ideas and exciting projects!  
-          Feel free to reach out for work inquiries, design discussions,  
-          or just to say hello 👋.
+    <footer className="footer" id="contact">
+      <div className="footer-container">
+        <h2>Let’s Build Something Great Together 🚀</h2>
+        <p>
+          I’m always open to freelance opportunities, collaborations, and
+          projects that create a real impact. If you’re a small business owner,
+          startup founder, or creative professional — I’d love to help you bring
+          your vision online with a modern, responsive website.
         </p>
 
-        {/* Contact Buttons */}
-        <div className="contact-buttons" data-aos="zoom-in" data-aos-delay="200">
-          <a href="mailto:garimaverma@gmail.com" className="contact-btn">
-            <FaEnvelope /> Email Me
+        <p className="hire-text">
+          💌 For project inquiries, reach me at{" "}
+          <a href="mailto:garima2004verma@gmail.com" className="email-link">
+            garima2004verma@gmail.com
           </a>
+        </p>
+
+        <div className="social-links">
           <a
-            href="https://linkedin.com/in/garima-verma"
+            href="https://linkedin.com/in/garimaverma"
             target="_blank"
             rel="noreferrer"
-            className="contact-btn"
           >
-            <FaLinkedin /> LinkedIn
+            💼 LinkedIn
           </a>
           <a
             href="https://github.com/Garima017-ui"
             target="_blank"
             rel="noreferrer"
-            className="contact-btn"
           >
-            <FaGithub /> GitHub
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="contact-btn"
-          >
-            <FaInstagram /> Instagram
+            💻 GitHub
           </a>
         </div>
-      </div>
 
-      {/* Footer Section */}
-      <footer className="footer">
-        <p>© {new Date().getFullYear()} Garima Verma | Made with 💖 using React</p>
-      </footer>
-    </section>
+        <p className="copyright">
+          © {new Date().getFullYear()} Garima Verma | Web Developer & Designer
+          | Empowering Small Businesses 🌍
+        </p>
+      </div>
+    </footer>
   );
 }

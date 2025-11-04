@@ -1,60 +1,46 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./About.css";
 
 export default function About() {
-  const aboutRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     AOS.init({ duration: 1200 });
-
-    const observer = new IntersectionObserver(
-      (entries) => setIsVisible(entries[0].isIntersecting),
-      { threshold: 0.4 }
-    );
-
-    const node = aboutRef.current; // ✅ capture the current ref safely
-    if (node) observer.observe(node);
-
-    return () => {
-      if (node) observer.unobserve(node); // ✅ use captured node instead of ref.current
-    };
   }, []);
 
   return (
-    <section
-      ref={aboutRef}
-      className={`about ${isVisible ? "spread" : "stack"}`}
-      id="about"
-    >
-      <div className="about-container">
+    <section className="about-section" id="about">
+      <h2 className="section-title" data-aos="fade-up">
+        About Me
+      </h2>
+
+      <div className="about-container" data-aos="fade-up">
         <div className="about-card">
-          <h3>💫 About Me</h3>
+          <h3>💫 Who I Am</h3>
           <p>
-            Hi, I’m <b>Garima Verma</b> — a creative and passionate developer
-            who loves designing smooth, modern, and user-friendly experiences.
+            I’m <b>Garima Verma</b>, a software developer passionate about
+            creating accessible, user-friendly, and visually engaging web
+            experiences. I love transforming complex ideas into simple,
+            effective solutions.
           </p>
         </div>
 
         <div className="about-card">
           <h3>🎓 Education</h3>
           <p>
-            <b>Sheridan College</b> — Computer Programming Diploma (2023–2025)
+            <b>Sheridan College</b> — Computer Programming (2023–2025)
             <br />
-            Focused on full-stack web development, databases, and software
-            design.
+            Focused on Full-Stack Development, Databases, and Software Design.
           </p>
         </div>
 
         <div className="about-card">
           <h3>🧠 Skills</h3>
           <ul>
-            <li>Frontend: React, Angular, HTML, CSS, TypeScript</li>
+            <li>Frontend: React, Angular, TypeScript, HTML, CSS</li>
             <li>Backend: Java, Python, Spring Boot, Flask</li>
             <li>Database: MySQL, Oracle, MongoDB</li>
-            <li>Tools: Git, VS Code, Figma, Netlify</li>
+            <li>Tools: Git, Figma, VS Code, Netlify</li>
           </ul>
         </div>
       </div>
